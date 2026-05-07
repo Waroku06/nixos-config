@@ -11,7 +11,7 @@
 
 `assets`文件夹下包含了[遍黑体](https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project)、[壁纸](https://www.pixiv.net/artworks/121023003)与自制 NixOS Logo.
 
-## [NixOS 安装指南](https://github.com/Waroku06/nixos-config/wiki/https://github.com/Waroku06/nixos-config/wiki/NixOS-%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97)
+## [NixOS 安装指南](https://github.com/Waroku06/nixos-config/wiki/https://github.com/Waroku06/nixos-config/wiki/NixOS%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97)
 
 # Niri 快捷键
 ## 基础操作
