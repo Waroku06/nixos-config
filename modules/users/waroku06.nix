@@ -19,10 +19,8 @@
         overwriteBackup = true;
       };
 
-      # 用户信息 我指定了默认 shell 是 fish
       users.users.waroku06 = {
         isNormalUser = true;
-        shell = pkgs.fish;
         extraGroups = [
           "wheel"
           "networkmanager"
