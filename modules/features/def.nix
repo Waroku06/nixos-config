@@ -9,7 +9,6 @@
         niri
         plasma
         programs
-        shell
       ];
     };
 

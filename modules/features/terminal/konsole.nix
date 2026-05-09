@@ -1,5 +1,10 @@
 { self, inputs, ... }:
 {
+  flake.nixosModules.konsole =
+    { pkgs, ... }:
+    {
+      environment.plasma6.excludePackages = [ pkgs.kdePackages.konsole ];
+    };
   flake.homeModules.konsole = _: {
     # Konsole 终端个性化配置
     # 1. 映射配色方案文件 (.colorscheme)
@@ -122,6 +127,5 @@
       enable = true;
       defaultProfile = "waroku06"; # 必须与上面 .profile 里的 Name 一致
     };
-
   };
 }
