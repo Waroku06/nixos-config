@@ -17,7 +17,6 @@
           fcitx5-gtk # GTK 程序支持
           qt6Packages.fcitx5-chinese-addons # 额外中文组件
           qt6Packages.fcitx5-configtool # 图形化配置工具
-          fcitx5-fluent # 主题皮肤
         ];
         fcitx5.settings.inputMethod = {
           GroupOrder."0" = "Default";
@@ -30,6 +29,12 @@
           "Groups/0/Items/1".Name = "rime";
           "Groups/0/Items/2".Name = "mozc";
         };
+      };
+      environment.sessionVariables = {
+        # GTK_IM_MODULE = "fcitx";
+        QT_IM_MODULE = "fcitx";
+        QT5_IM_MODULE = "fcitx";
+        XMODIFIERS = "@im=fcitx";
       };
     };
   flake.homeModules.fcitx5 = _: {

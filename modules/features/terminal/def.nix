@@ -4,7 +4,8 @@
     { ... }:
     {
       imports = with self.nixosModules; [
-        konsole # 这个模块是禁用 Konsole 的
+        # konsole # 这个模块是禁用 Konsole 的
+        kitty
       ];
     };
   flake.homeModules.terminal =

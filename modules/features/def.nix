@@ -9,6 +9,7 @@
         niri
         plasma
         programs
+        terminal
       ];
     };
 
