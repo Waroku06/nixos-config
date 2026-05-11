@@ -16,6 +16,7 @@
     { ... }:
     {
       imports = with self.homeModules; [
+        fcitx5
         fonts
         plasma
         programs

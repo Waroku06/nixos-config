@@ -79,7 +79,6 @@
         nil
         marksman # 配合 Kate
         nixfmt # 格式化 Nix 配置文件
-        nemo
       ];
 
       # 开机自动启动 Clash 代理 TODO 根据需要自行调整命令
