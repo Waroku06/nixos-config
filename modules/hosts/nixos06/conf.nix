@@ -8,8 +8,9 @@
         features
       ];
 
-      # 启用性能内核 linux-zen 以及 GameMode
-      boot.kernelPackages = pkgs.linuxPackages_zen;
+      # 启用性能内核 cachyos 以及 GameMode
+      nixpkgs.overlays = [ inputs.nix-cachyos-kernel.overlays.pinned ];
+      boot.kernelPackages = pkgs.cachyosKernels.linuxPackages-cachyos-latest;
       programs.gamemode.enable = true;
 
       # 开机
@@ -52,11 +53,15 @@
           "https://mirrors.ustc.edu.cn/nix-channels/store"
           "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
           "https://cache.nixos.org/"
+          "https://attic.xuyh0120.win/lantian" # cachyos-kernel
+          "https://cache.garnix.io" # cachyos-kernel
         ];
         trusted-substituters = [ "https://prismlauncher.cachix.org" ]; # prismlauncher
         trusted-public-keys = [
           "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
           "prismlauncher.cachix.org-1:9/n/FGyABA2jLUVfY+DEp4hKds/rwO+SCOtbOkDzd+c=" # prismlauncher
+          "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc=" # cachyos-kernel
+          "cache.garnix.io:CTFPyKSLcx5RMJKfLo5EEPUObbA78b0YQ2DTCJXqr9g=" # cachyos-kernel
         ];
         experimental-features = [
           "nix-command"
@@ -74,7 +79,7 @@
         tree
         sshfs
         javaPackages.compiler.openjdk25 # java25，运行 Minecraft 用
-        # create a fhs environment by command `fhs`, so we can run non-nixos packages in nixos!
+        # 在终端输入 fhs 进入 fhs 环境，这样我们就可以在 nixos 中运行非 nixos 包！
         (
           let
             base = pkgs.appimageTools.defaultFhsEnvArgs;
