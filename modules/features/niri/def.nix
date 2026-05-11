@@ -8,6 +8,9 @@
         package = self.packages.${pkgs.stdenv.hostPlatform.system}.Niri06;
       };
       services.displayManager.defaultSession = "niri";
+      environment.sessionVariables = {
+        NIXOS_OZONE_WL = "1";
+      };
     };
 
   perSystem =

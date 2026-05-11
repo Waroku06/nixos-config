@@ -1,5 +1,12 @@
 { self, inputs, ... }:
 {
+  flake.nixosModules.kitty =
+    { pkgs, lib, ... }:
+    {
+      environment.sessionVariables = {
+        TERMINAL = "kitty";
+      };
+    };
   flake.homeModules.kitty =
     { pkgs, lib, ... }:
     {
