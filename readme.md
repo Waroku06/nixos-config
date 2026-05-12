@@ -7,7 +7,7 @@
 
 状态：维护中
 
-**在我的电脑上的已知问题：在静音模式下注销，如果在此之前有进入过 KDE Plasma 环境，重新登录之后静音会自动解除。**
+**在我的电脑上的已知问题：在静音模式下注销，重新登录之后静音可能会自动解除。**
 
 `assets`文件夹下包含了[遍黑体](https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project)、[壁纸](https://www.pixiv.net/artworks/121023003)与自制 NixOS Logo.
 
@@ -69,3 +69,10 @@
 2. 打开 OBS Studio，设置**原生分辨率**而不是 1080P. 在 设置/输出 先把简单改为**高级**，然后在录制那一栏把编码器改为 **x264**。
 3. 配置 Wine：确认自己的代理可用，然后打开终端，输入 winetricks，在里面安装 cjkfonts。进入 winecfg，在函数库那一栏的新增函数库顶替里输入 ddraw，点击添加，确保是原装先于内建。
 4. Prism Launcher 里的设置，勾选启用什么什么 GameMode，如果有独显也勾上独显。
+
+# 参考资料
+[Vimjoyer, Ultimate NixOS Desktop: Niri, Noctalia Shell, and the Dendritic Pattern | Full Setup](https://www.youtube.com/watch?v=aNgujRXDTdE)
+[Youthdreamer/nixos-config](https://github.com/Youthdreamer/nixos-config)
+[HPCesia/nix-config](https://repo.hpcesia.com/HPCesia/nix-config/src/branch/main)
+[Ryan Yin, NixOS & Flakes Book](https://nixos-and-flakes.thiscute.world/zh/)
+[知狐，NixOS 安装 Rime 输入法](https://zhuanlan.zhihu.com/p/1963358188226183647)
