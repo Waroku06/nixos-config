@@ -111,7 +111,7 @@
       # 默认 vim 编辑器
       environment.variables.EDITOR = "vim";
 
-      # 固件 音频 蓝牙 等
+      # 固件 蓝牙 等
       hardware = {
         enableAllFirmware = true; # 自动安装所有固件
         cpu.intel.updateMicrocode = true;
@@ -131,13 +131,21 @@
         };
         bluetooth.enable = true;
       };
+
+      # 音频
       services.pipewire = {
         enable = true;
+        # package = pkgs.pipewire;
         alsa.enable = true;
         alsa.support32Bit = true;
         pulse.enable = true;
+        # 若你需要使用 JACK 应用，取消下面的注释
+        jack.enable = true;
+        wireplumber.enable = true;
       };
+      # rtkit 非必需但推荐
       security.rtkit.enable = true;
+      services.pulseaudio.enable = false;
 
       services.xserver.enable = true;
       services.displayManager.gdm.enable = true;
