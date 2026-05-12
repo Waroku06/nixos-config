@@ -3,10 +3,16 @@
   flake.nixosModules.nixos06conf =
     { pkgs, lib, ... }:
     {
-      imports = with self.nixosModules; [
-        nixos06hard
-        features
-      ];
+      imports =
+        (with self.nixosModules; [
+          nixos06hard
+          features
+        ])
+        ++ (with inputs.nixos-hardware.nixosModules; [
+          common-cpu-intel
+          common-pc-laptop
+          common-pc-laptop-ssd
+        ]);
 
       # 启用性能内核 cachyos 以及 GameMode
       nixpkgs.overlays = [ inputs.nix-cachyos-kernel.overlays.pinned ];
@@ -118,16 +124,6 @@
         graphics = {
           enable = true;
           enable32Bit = true;
-          extraPackages = with pkgs; [
-            intel-media-driver
-            intel-vaapi-driver
-            libvdpau-va-gl
-            intel-compute-runtime
-          ];
-          extraPackages32 = with pkgs.pkgsi686Linux; [
-            intel-media-driver
-            intel-vaapi-driver
-          ];
         };
         bluetooth.enable = true;
       };

@@ -72,7 +72,11 @@
 
 # 参考资料
 [Vimjoyer, Ultimate NixOS Desktop: Niri, Noctalia Shell, and the Dendritic Pattern | Full Setup](https://www.youtube.com/watch?v=aNgujRXDTdE)
+
 [Youthdreamer/nixos-config](https://github.com/Youthdreamer/nixos-config)
-[HPCesia/nix-config](https://repo.hpcesia.com/HPCesia/nix-config/src/branch/main)
+
+[HPCesia/nix-config](https://repo.hpcesia.com/HPCesia/nix-config)
+
 [Ryan Yin, NixOS & Flakes Book](https://nixos-and-flakes.thiscute.world/zh/)
+
 [知狐，NixOS 安装 Rime 输入法](https://zhuanlan.zhihu.com/p/1963358188226183647)

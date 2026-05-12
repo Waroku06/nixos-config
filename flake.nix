@@ -6,7 +6,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+    nixos-hardware.url = "github:NixOS/nixos-hardware/master";
+    
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
       inputs.nixpkgs.follows = "nixpkgs";
