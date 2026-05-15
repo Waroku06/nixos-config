@@ -643,12 +643,45 @@
     "schedulingMode": "off",
     "manualSunrise": "06:30",
     "manualSunset": "18:30",
-    "generationMethod": "tonal-spot",
+    "generationMethod": "fruit-salad",
     "monitorForColors": "",
     "syncGsettings": true
   },
   "templates": {
-    "activeTemplates": [],
+    "activeTemplates": [
+      {
+        "enabled": true,
+        "id": "gtk"
+      },
+      {
+        "enabled": true,
+        "id": "qt"
+      },
+      {
+        "enabled": true,
+        "id": "kitty"
+      },
+      {
+        "enabled": true,
+        "id": "steam"
+      },
+      {
+        "enabled": true,
+        "id": "code"
+      },
+      {
+        "enabled": true,
+        "id": "niri"
+      },
+      {
+        "enabled": true,
+        "id": "starship"
+      },
+      {
+        "enabled": true,
+        "id": "yazi"
+      }
+    ],
     "enableUserTheming": false
   },
   "nightLight": {

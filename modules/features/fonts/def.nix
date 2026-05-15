@@ -16,6 +16,7 @@
         source-han-sans
         source-han-serif
         source-han-mono
+        inputs.rewine.packages.${pkgs.stdenv.hostPlatform.system}.ttf-ms-win10 # For better WPS/LibreOffice compatibility with MS Word documents
       ];
       fonts.fontconfig = {
         enable = true;
