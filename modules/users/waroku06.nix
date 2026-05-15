@@ -50,6 +50,7 @@
       home.homeDirectory = "/home/waroku06";
 
       home.packages = with pkgs; [
+        # 解压缩工具
         arj
         lrzip
         lzop
@@ -57,28 +58,34 @@
         libzip
         p7zip
         rar
-        zip # 解压缩工具
+        zip
+        # 常用软件
         qq
         wechat
         obsidian
         sageWithDoc
         wineWow64Packages.unstable
         winetricks
-        mpv
-        vlc
-        haruna
         libreoffice
         yazi
         google-chrome
         subtitlecomposer
         obs-studio
+        # 多媒体
+        mpv
+        vlc
+        haruna
+        # Vulkan 相关
         vulkan-loader
         vulkan-validation-layers
         vulkan-tools
         inputs.prismlauncher.packages.${pkgs.stdenv.hostPlatform.system}.prismlauncher # Minecraft 启动器
+        # Nix 语言支持
         nil
+        nixd
         marksman # 配合 Kate
         nixfmt # 格式化 Nix 配置文件
+        inputs.lxl66566.packages.${pkgs.stdenv.hostPlatform.system}.xp3-pack-unpack
       ];
 
       # 开机自动启动 Clash 代理 TODO 根据需要自行调整命令
