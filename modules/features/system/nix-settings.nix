@@ -25,6 +25,9 @@
         ];
         auto-optimise-store = true;
       };
+      nixpkgs.overlays = [
+        inputs.nur.overlays.default
+      ];
       nixpkgs.config.allowUnfree = true;
     };
 }

@@ -362,7 +362,8 @@
       "org.kde.kdeconnect.app",
       "wechat",
       "org.kde.dolphin",
-      "org.kde.kwalletmanager"
+      "org.kde.kwalletmanager",
+      "thunar"
     ],
     "sortByMostUsed": true,
     "terminalCommand": "kitty -e",
@@ -639,11 +640,11 @@
   "colorSchemes": {
     "useWallpaperColors": true,
     "predefinedScheme": "Catppuccin",
-    "darkMode": true,
+    "darkMode": false,
     "schedulingMode": "off",
     "manualSunrise": "06:30",
     "manualSunset": "18:30",
-    "generationMethod": "fruit-salad",
+    "generationMethod": "content",
     "monitorForColors": "",
     "syncGsettings": true
   },
@@ -676,10 +677,6 @@
       {
         "enabled": true,
         "id": "starship"
-      },
-      {
-        "enabled": true,
-        "id": "yazi"
       }
     ],
     "enableUserTheming": false

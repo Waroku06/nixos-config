@@ -16,7 +16,7 @@
       # 壁纸：建议换成你自己稳定放置的路径
       kscreenlocker.appearance.wallpaper = "${self}/assets/wallpaper/121023003.jpg";
       workspace.wallpaper = "${self}/assets/wallpaper/121023003.jpg";
-      workspace.lookAndFeel = "org.kde.breezeDark.desktop";
+      workspace.lookAndFeel = "org.kde.breeze.desktop";
       configFile = {
         # 语言
         plasma-localerc.Formats.LANG = "zh_CN.UTF-8";
@@ -49,6 +49,7 @@
         kwinrc.Wayland."InputMethod[$e]" =
           "/run/current-system/sw/share/applications/fcitx5-wayland-launcher.desktop";
         # 缩放
+        kdeglobals.KScreen.ScaleFactor = 1.45;
         kwinrc.Xwayland.Scale = 1.45;
         # 桌面数量
         kwinrc.Desktops.Number = 1;
