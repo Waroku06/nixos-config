@@ -26,6 +26,7 @@
       boot.kernelModules = [ "kvm-intel" ];
       boot.extraModulePackages = [ ];
 
+      # TODO 如果更换了设备，需要调整下面的 device，换成正确的 LABEL，可以输入 lsblk -pf 查看
       fileSystems."/" = {
         device = "/dev/disk/by-uuid/5087901b-f962-419e-a494-5fd7a5a2193b";
         fsType = "ext4";
@@ -39,11 +40,9 @@
           "dmask=0022"
         ];
       };
-
       # 自动挂载 C 盘 D 盘，挂载点自由调整
-      # TODO 如果更换了设备，需要调整下面的 device，换成正确的 UUID，可以输入 lsblk -pf 查看
       fileSystems."/run/media/waroku06/Windows-SSD" = {
-        device = "/dev/disk/by-uuid/3C3C90463C8FF962";
+        device = "LABEL=Windows-SSD";
         fsType = "ntfs3";
         options = [
           "nofail" # 不要删掉这个
@@ -58,7 +57,7 @@
       };
 
       fileSystems."/run/media/waroku06/Data" = {
-        device = "/dev/disk/by-uuid/60041BD7041BAF52";
+        device = "LABEL=Data";
         fsType = "ntfs3";
         options = [
           "nofail" # 不要删掉这个

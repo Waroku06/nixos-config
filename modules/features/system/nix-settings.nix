@@ -3,7 +3,7 @@
   flake.nixosModules.nix-settings =
     { ... }:
     {
-      # 镜像源 flakes 等
+      # 镜像源 flakes nixpkgs 等
       nix.settings = {
         substituters = [
           "https://mirrors.ustc.edu.cn/nix-channels/store"

@@ -4,6 +4,11 @@
     { ... }:
     {
       # 固件 蓝牙 等
+      imports = with inputs.nixos-hardware.nixosModules; [
+        common-cpu-intel
+        common-pc-laptop
+        common-pc-laptop-ssd
+      ];
       hardware = {
         enableAllFirmware = true; # 自动安装所有固件
         cpu.intel.updateMicrocode = true;

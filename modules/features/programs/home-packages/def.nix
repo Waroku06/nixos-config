@@ -8,7 +8,7 @@
         desktop-apps
         development-tools
         multimedia-apps
-        wine-tools
+        game
       ];
     };
 }

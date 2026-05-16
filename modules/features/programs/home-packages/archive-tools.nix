@@ -3,8 +3,8 @@
   flake.homeModules.archive-tools =
     { pkgs, ... }:
     {
+      # 解压缩工具
       home.packages = with pkgs; [
-        # 解压缩工具
         arj
         lrzip
         lzop
@@ -13,6 +13,7 @@
         p7zip
         rar
         zip
+        nur.repos.lxl66566.xp3-pack-unpack
       ];
     };
 }
