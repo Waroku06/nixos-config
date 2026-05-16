@@ -6,9 +6,11 @@
       imports = with self.nixosModules; [
         fcitx5
         fonts
+        networking
         niri
         plasma
         programs
+        system
         terminal
       ];
     };
@@ -19,6 +21,7 @@
       imports = with self.homeModules; [
         fcitx5
         fonts
+        networking
         plasma
         programs
         shell
