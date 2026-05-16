@@ -22,10 +22,10 @@
       #
       # inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # NUR, see https://discourse.nixos.org/t/using-nur-in-nixos-configuration-via-flakes/51221
-    lxl66566.url = "github:lxl66566/NUR"; # xp3-pack-unpack
-    rewine.url = "github:wineee/nur-packages"; # ttf-ms-win10
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     # Dendritic Pattern
     flake-parts.url = "github:hercules-ci/flake-parts";
