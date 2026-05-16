@@ -16,7 +16,7 @@
         source-han-sans
         source-han-serif
         source-han-mono
-        inputs.rewine.packages.${pkgs.stdenv.hostPlatform.system}.ttf-ms-win10 # For better WPS/LibreOffice compatibility with MS Word documents
+        nur.repos.hexadecimalDinosaur.ttf-ms-win11.all # WPS / LibreOffice / MS Word 文档兼容
       ];
       fonts.fontconfig = {
         enable = true;

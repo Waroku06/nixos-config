@@ -67,10 +67,12 @@
         wineWow64Packages.unstable
         winetricks
         libreoffice
+        wpsoffice-cn
         yazi
         google-chrome
         subtitlecomposer
         obs-studio
+        thunar
         # 多媒体
         mpv
         vlc
@@ -85,7 +87,7 @@
         nixd
         marksman # 配合 Kate
         nixfmt # 格式化 Nix 配置文件
-        inputs.lxl66566.packages.${pkgs.stdenv.hostPlatform.system}.xp3-pack-unpack
+        nur.repos.lxl66566.xp3-pack-unpack
       ];
 
       # 开机自动启动 Clash 代理 TODO 根据需要自行调整命令
