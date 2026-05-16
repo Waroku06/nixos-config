@@ -16,6 +16,7 @@
       imports = with self.homeModules; [
         fastfetch
         git
+        home-packages
         starship
         vscode
       ];
