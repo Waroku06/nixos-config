@@ -2,7 +2,7 @@
 {
   # TODO 默认的用户名是 waroku06，如果想修改，请把所有其他使用用户名的地方也作出同样修改
   flake.nixosModules.waroku06 =
-    { pkgs, inputs, ... }:
+    { inputs, ... }:
     {
       imports = [
         inputs.home-manager.nixosModules.home-manager
@@ -33,14 +33,7 @@
     };
 
   flake.homeModules.waroku06 =
-    {
-      config,
-      pkgs,
-      lib,
-      pkgs-stable,
-      inputs,
-      ...
-    }:
+    { ... }:
     {
       imports = [
         self.homeModules.features
@@ -48,64 +41,6 @@
 
       home.username = "waroku06";
       home.homeDirectory = "/home/waroku06";
-
-      home.packages = with pkgs; [
-        # 解压缩工具
-        arj
-        lrzip
-        lzop
-        zstd
-        libzip
-        p7zip
-        rar
-        zip
-        # 常用软件
-        qq
-        wechat
-        obsidian
-        sageWithDoc
-        wineWow64Packages.unstable
-        winetricks
-        libreoffice
-        wpsoffice-cn
-        yazi
-        google-chrome
-        subtitlecomposer
-        obs-studio
-        thunar
-        # 多媒体
-        mpv
-        vlc
-        haruna
-        # Vulkan 相关
-        vulkan-loader
-        vulkan-validation-layers
-        vulkan-tools
-        inputs.prismlauncher.packages.${pkgs.stdenv.hostPlatform.system}.prismlauncher # Minecraft 启动器
-        # Nix 语言支持
-        nil
-        nixd
-        marksman # 配合 Kate
-        nixfmt # 格式化 Nix 配置文件
-        nur.repos.lxl66566.xp3-pack-unpack
-      ];
-
-      # 开机自动启动 Clash 代理 TODO 根据需要自行调整命令
-      systemd.user.services.auto-cl = {
-        Unit = {
-          Description = "Auto run cl command on startup";
-          After = [ "network-online.target" ];
-          Wants = [ "network-online.target" ];
-        };
-        Service = {
-          ExecStart = "${pkgs.fish}/bin/fish -c '/home/waroku06/clash/clash -d /home/waroku06/clash/'";
-          Restart = "on-failure";
-          RestartSec = "5s";
-        };
-        Install = {
-          WantedBy = [ "default.target" ];
-        };
-      };
 
       # This value determines the Home Manager release that your
       # configuration is compatible with. This helps avoid breakage
