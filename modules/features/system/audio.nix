@@ -3,6 +3,7 @@
   flake.nixosModules.audio =
     { ... }:
     {
+      # 音频服务
       services.pipewire = {
         enable = true;
         # package = pkgs.pipewire;

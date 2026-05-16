@@ -3,8 +3,8 @@
   flake.homeModules.multimedia-apps =
     { pkgs, ... }:
     {
+      # 多媒体
       home.packages = with pkgs; [
-        # 多媒体
         mpv
         vlc
         haruna
