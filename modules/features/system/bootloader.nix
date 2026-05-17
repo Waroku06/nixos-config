@@ -4,13 +4,13 @@
     { ... }:
     {
       boot.loader = {
-        efi.canTouchEfiVariables = true;
-        grub = {
+        systemd-boot = {
           enable = true;
-          device = "nodev";
-          efiSupport = true;
-          useOSProber = true;
+          configurationLimit = 6;
+          consoleMode = "max";
+          editor = false;
         };
+        efi.canTouchEfiVariables = true;
       };
     };
 }

@@ -10,7 +10,7 @@
     }:
 
     {
-      # TODO 新设备务必把新的 hardware-configuration.nix 的内容完整地贴进来！
+      # TODO 新设备注意把新的 hardware-configuration.nix 内容对应进来
       imports = [
         (modulesPath + "/installer/scan/not-detected.nix")
       ];
@@ -26,21 +26,21 @@
       boot.kernelModules = [ "kvm-intel" ];
       boot.extraModulePackages = [ ];
 
-      # TODO 如果更换了设备，需要调整下面的 device，换成正确的 LABEL，可以输入 lsblk -pf 查看
+      # TODO 新设备需要调整下面的 device，可以输入 lsblk -pf 查看要使用的分区，建议使用 LABEL 来指定分区
       fileSystems."/" = {
-        device = "/dev/disk/by-uuid/5087901b-f962-419e-a494-5fd7a5a2193b";
+        device = "LABEL=nixos";
         fsType = "ext4";
       };
 
       fileSystems."/boot" = {
-        device = "/dev/disk/by-uuid/B792-545D";
+        device = "LABEL=boot";
         fsType = "vfat";
         options = [
           "fmask=0022"
           "dmask=0022"
         ];
       };
-      # 自动挂载 C 盘 D 盘，挂载点自由调整
+      # 自动挂载 C 盘 D 盘
       fileSystems."/run/media/waroku06/Windows-SSD" = {
         device = "LABEL=Windows-SSD";
         fsType = "ntfs3";
@@ -71,7 +71,7 @@
         ];
       };
 
-      # Swap
+      # Swap，不单独分区
       zramSwap = {
         enable = true;
         memoryPercent = 100;
