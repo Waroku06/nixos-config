@@ -9,6 +9,8 @@
         nixd
         marksman
         nixfmt
+        # LaTeX 支持
+        texliveFull
       ];
     };
 }
