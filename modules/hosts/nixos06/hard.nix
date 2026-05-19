@@ -26,7 +26,8 @@
       boot.kernelModules = [ "kvm-intel" ];
       boot.extraModulePackages = [ ];
 
-      # TODO 新设备需要调整下面的 device，可以输入 lsblk -pf 查看要使用的分区，建议使用 LABEL 来指定分区
+      # TODO 新设备需要调整下面的 device，可以输入 lsblk -pf 查看要使用的分区，建议使用 LABEL 来指定分区。
+      # 注意，如果使用 LABEL 来指定分区，确保分区的 LABEL 是唯一的，否则可能会导致系统无法正确识别分区。
       fileSystems."/" = {
         device = "LABEL=nixos";
         fsType = "ext4";
