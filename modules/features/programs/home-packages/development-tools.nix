@@ -1,9 +1,10 @@
 { self, inputs, ... }:
 {
   flake.homeModules.development-tools =
-    { pkgs, inputs, ... }:
+    { pkgs, pkgs-pkun, inputs, ... }:
     {
       home.packages = with pkgs; [
+        pkgs-pkun.sage
         # Nix 语法支持
         nil
         nixd

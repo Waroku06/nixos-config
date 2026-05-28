@@ -8,7 +8,6 @@
         qq
         wechat
         obsidian
-        sageWithDoc
         libreoffice
         wpsoffice-cn
         yazi

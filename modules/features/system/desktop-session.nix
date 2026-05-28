@@ -4,7 +4,6 @@
     { ... }:
     {
       services.xserver.enable = true;
-      services.displayManager.gdm.enable = true;
-      services.displayManager.gdm.wayland = true;
+      services.displayManager.plasma-login-manager.enable = true;
     };
 }

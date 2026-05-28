@@ -2,7 +2,7 @@
 {
   # TODO 默认的用户名是 waroku06，如果想修改，请把所有其他使用用户名的地方也作出同样修改
   flake.nixosModules.waroku06 =
-    { inputs, ... }:
+    { pkgs, inputs, ... }:
     {
       imports = [
         inputs.home-manager.nixosModules.home-manager
@@ -13,7 +13,17 @@
         useUserPackages = true;
         sharedModules = [ inputs.plasma-manager.homeModules.plasma-manager ];
         users.waroku06 = self.homeModules.waroku06;
-        extraSpecialArgs = { inherit inputs; };
+        extraSpecialArgs = {
+          inherit inputs;
+          pkgs-stable = import inputs.nixpkgs-stable {
+            system = pkgs.stdenv.hostPlatform.system;
+            config.allowUnfree = true;
+          };
+          pkgs-pkun = import inputs.nixpkgs-pkun {
+            system = pkgs.stdenv.hostPlatform.system;
+            config.allowUnfree = true;
+          };
+        };
         # 防止与 Plasma 图形化设置冲突
         backupFileExtension = "backup";
         overwriteBackup = true;

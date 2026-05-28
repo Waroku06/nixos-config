@@ -4,6 +4,7 @@
     { pkgs, ... }:
     {
       environment.systemPackages = [
+        inputs.nix-alien.packages.${pkgs.stdenv.hostPlatform.system}.nix-alien
         # 在终端输入 fhs 进入 fhs 环境，这样我们就可以在 nixos 中运行非 nixos 包！
         (
           let
@@ -32,5 +33,6 @@
           )
         )
       ];
+      programs.nix-ld.enable = true;
     };
 }

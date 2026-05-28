@@ -1,15 +1,14 @@
 {
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs/nixos-unstable";
-    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-25.11";
+    nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-26.05";
+    nixpkgs-pkun.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     home-manager = {
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
     nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    
     plasma-manager = {
       url = "github:nix-community/plasma-manager";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -26,8 +25,11 @@
       url = "github:nix-community/NUR";
       inputs.nixpkgs.follows = "nixpkgs";
     };
-
-    # Dendritic Pattern
+    nix-alien.url = "github:thiagokokada/nix-alien";
+    # 等换设备之后再启用
+    # disko.url = "github:nix-community/disko";
+    # disko.inputs.nixpkgs.follows = "nixpkgs";
+    # preservation.url = "github:nix-community/preservation";
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
     wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";

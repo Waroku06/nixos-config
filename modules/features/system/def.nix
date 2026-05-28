@@ -13,6 +13,7 @@
         locale
         nix-settings
         power-management
+        # preservation
         system-packages
       ];
     };
