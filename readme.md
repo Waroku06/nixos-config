@@ -1,15 +1,16 @@
 # 基本信息
-这是我的 NixOS 个人配置仓库，采用 Dendritic 模式。
+这是我的 NixOS 个人配置仓库。
 
-此配置使用 Niri (Noctalia) + KDE Plasma 环境，软件源主要使用`unstable`分支，也有最新的`stable`分支可选。
+此配置使用 Niri (Noctalia) + KDE Plasma 桌面环境，软件源主要使用`unstable`分支，也有最新的`stable`分支以及`nixpkgs-unstable`分支可选。
 
-本仓库为自用，或许可以面向没有开发工作并且轻度使用电脑的桌面端用户。
+此配置为自用，或许可以面向没有开发工作并且轻度使用电脑的桌面端用户。采用[`Dendritic Pattern`](https://github.com/mightyiam/dendritic).
 
 状态：维护中
 
+`assets`文件夹下包含了[遍黑体](https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project)、[壁纸](https://www.pixiv.net/artworks/121023003)与自制 NixOS Logo.
+
 **在我的电脑上的已知问题：在静音模式下注销，重新登录之后静音可能会自动解除。**
 
-`assets`文件夹下包含了[遍黑体](https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project)、[壁纸](https://www.pixiv.net/artworks/121023003)与自制 NixOS Logo.
 
 ## [NixOS 安装指南](https://github.com/Waroku06/nixos-config/wiki/NixOS-%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97)
 

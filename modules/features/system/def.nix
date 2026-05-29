@@ -11,7 +11,7 @@
         fhs-env
         hardware-support
         locale
-        nix-settings
+        nixpkgs
         power-management
         # preservation
         system-packages

@@ -1,7 +1,20 @@
 { self, inputs, ... }:
 {
-  flake.nixosModules.nix-settings =
-    { ... }:
+  flake.nixosModules.nixpkgs =
+    { pkgs, ... }:
+    let
+      system = pkgs.stdenv.hostPlatform.system;
+      pkgx = {
+        pkgs-stable = import inputs.nixpkgs-stable {
+          inherit system;
+          config.allowUnfree = true;
+        };
+        pkgs-pkun = import inputs.nixpkgs-pkun {
+          inherit system;
+          config.allowUnfree = true;
+        };
+      };
+    in
     {
       # 镜像源 flakes nixpkgs 等
       nix.settings = {
@@ -27,5 +40,7 @@
         inputs.nur.overlays.default
       ];
       nixpkgs.config.allowUnfree = true;
+      _module.args = pkgx;
+      home-manager.extraSpecialArgs = pkgx;
     };
 }

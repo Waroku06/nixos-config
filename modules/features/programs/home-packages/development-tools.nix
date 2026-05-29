@@ -1,7 +1,7 @@
 { self, inputs, ... }:
 {
   flake.homeModules.development-tools =
-    { pkgs, pkgs-pkun, inputs, ... }:
+    { pkgs, pkgs-pkun, ... }:
     {
       home.packages = with pkgs; [
         pkgs-pkun.sage
