@@ -47,12 +47,14 @@
     };
 
   flake.homeModules.fonts =
-    { ... }:
+    { pkgs, ... }:
     {
       # 使用遍黑体，显示更多生僻汉字
       home.file = {
-        ".local/share/fonts/PlangothicP1_Regular.ttf".source = ../../../assets/fonts/PlangothicP1_Regular.ttf;
-        ".local/share/fonts/PlangothicP2_Regular.ttf".source = ../../../assets/fonts/PlangothicP2_Regular.ttf;
+        ".local/share/fonts/PlangothicP1_Regular.ttf".source =
+          "${inputs.plangothic}/fonts/static/PlangothicP1-Regular.ttf";
+        ".local/share/fonts/PlangothicP2_Regular.ttf".source =
+          "${inputs.plangothic}/fonts/static/PlangothicP2-Regular.ttf";
       };
       fonts.fontconfig.enable = true;
     };

@@ -14,6 +14,7 @@
         google-chrome
         subtitlecomposer
         thunar
+        flameshot
       ];
     };
 }

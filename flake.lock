@@ -411,6 +411,22 @@
         "type": "github"
       }
     },
+    "plangothic": {
+      "flake": false,
+      "locked": {
+        "lastModified": 1777702917,
+        "narHash": "sha256-psLl6l+to8YAnfX/uP9wdua+DdpXsAPe75mbyuHXBLk=",
+        "owner": "Fitzgerald-Porthmouth-Koenigsegg",
+        "repo": "Plangothic_Project",
+        "rev": "9458fc37736de31feddb9fef3aa304abced6d631",
+        "type": "github"
+      },
+      "original": {
+        "owner": "Fitzgerald-Porthmouth-Koenigsegg",
+        "repo": "Plangothic_Project",
+        "type": "github"
+      }
+    },
     "plasma-manager": {
       "inputs": {
         "home-manager": [
@@ -465,6 +481,7 @@
         "nixpkgs-pkun": "nixpkgs-pkun",
         "nixpkgs-stable": "nixpkgs-stable",
         "nur": "nur",
+        "plangothic": "plangothic",
         "plasma-manager": "plasma-manager",
         "prismlauncher": "prismlauncher",
         "wrapper-modules": "wrapper-modules"

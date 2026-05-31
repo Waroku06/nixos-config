@@ -69,7 +69,6 @@
 1. 启用中文、日文输入法：进入 Plasma 桌面，进入设置-键盘-虚拟键盘，应用 Fcitx5 Wayland 启动器；再进入输入法，点击右下角添加输入法，取消仅显示当前语言，添加中州韵和 Mozc，删除“拼音”，然后点击配置附加组件，经典用户界面，把主题和深色主题都改为“KDE Plasma (实验性)”。输入时把中州韵切换成**朙月拼音·简化字**模式。
 2. 打开 OBS Studio，设置**原生分辨率**而不是 1080P. 在 设置/输出 先把简单改为**高级**，然后在录制那一栏把编码器改为 **x264**。
 3. 配置 Wine：确认自己的代理可用，然后打开终端，输入 winetricks，在里面安装 cjkfonts。进入 winecfg，在函数库那一栏的新增函数库顶替里输入 ddraw，点击添加，确保是原装先于内建。
-4. Prism Launcher 里的设置，勾选启用什么什么 GameMode，如果有独显也勾上独显。
 
 # 参考资料
 [Vimjoyer, Ultimate NixOS Desktop: Niri, Noctalia Shell, and the Dendritic Pattern | Full Setup](https://www.youtube.com/watch?v=aNgujRXDTdE)

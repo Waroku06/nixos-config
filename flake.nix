@@ -26,6 +26,10 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-alien.url = "github:thiagokokada/nix-alien";
+    plangothic = {
+      url = "github:Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project";
+      flake = false;
+    };
     # 等换设备之后再启用
     # disko.url = "github:nix-community/disko";
     # disko.inputs.nixpkgs.follows = "nixpkgs";
