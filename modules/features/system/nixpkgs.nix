@@ -30,10 +30,6 @@
           "prismlauncher.cachix.org-1:9/n/FGyABA2jLUVfY+DEp4hKds/rwO+SCOtbOkDzd+c=" # prismlauncher
           "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc=" # cachyos-kernel
         ];
-        experimental-features = [
-          "nix-command"
-          "flakes"
-        ];
         auto-optimise-store = true;
       };
       nixpkgs.overlays = [

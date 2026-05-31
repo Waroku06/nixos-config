@@ -1,5 +1,12 @@
 { self, inputs, ... }:
 {
+  flake.nixosModules.home-packages = 
+    { ... }:
+    {
+      imports = with self.nixosModules; [
+        game
+      ];
+    };
   flake.homeModules.home-packages =
     { ... }:
     {

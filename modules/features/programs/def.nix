@@ -4,6 +4,7 @@
     { ... }:
     {
       imports = with self.nixosModules; [
+        home-packages
         kdeconnect
         steam
         nh

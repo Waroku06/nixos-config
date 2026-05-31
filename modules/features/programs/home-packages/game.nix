@@ -1,5 +1,12 @@
 { self, inputs, ... }:
 {
+  flake.nixosModules.game =
+    { pkgs, ... }:
+    {
+      environment.systemPackages = with pkgs; [
+        javaPackages.compiler.openjdk25 # java25，运行 Minecraft 用
+      ];
+    };
   flake.homeModules.game =
     { pkgs, ... }:
     {
