@@ -12,6 +12,7 @@
         programs
         system
         terminal
+        virtualisation
       ];
     };
 

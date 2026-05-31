@@ -6,7 +6,7 @@
       imports = with self.nixosModules; [
         audio
         bootloader
-        cachyos-gamemode
+        # cachyos-gamemode
         desktop-session
         fhs-env
         hardware-support
