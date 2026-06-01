@@ -1,5 +1,14 @@
 { self, inputs, ... }:
 {
+  flake.nixosModules.vscode =
+    { ... }:
+    {
+      preservation.preserveAt."/persistent".users.waroku06.directories = [
+        ".config/Code"
+        ".vscode"
+      ];
+    };
+
   flake.homeModules.vscode =
     { pkgs, lib, ... }:
     {

@@ -29,6 +29,23 @@
           "video"
         ];
       };
+
+      preservation.preserveAt."/persistent".users.waroku06 = {
+        directories = [
+          {
+            directory = ".ssh";
+            mode = "0700";
+          }
+          "Desktop"
+          "Documents"
+          "Downloads"
+          "Music"
+          "Pictures"
+          "Videos"
+          "nixos-config"
+        ];
+      };
+
       security.sudo.wheelNeedsPassword = false; # sudo 是否需要密码，如果需要的话请改为 true
     };
 
