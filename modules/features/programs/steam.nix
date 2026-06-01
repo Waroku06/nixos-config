@@ -11,9 +11,5 @@
         })
       ];
       programs.steam.enable = true;
-
-      preservation.preserveAt."/persistent".users.waroku06.directories = [
-        ".local/share/Steam"
-      ];
     };
 }

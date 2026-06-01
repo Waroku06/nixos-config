@@ -8,7 +8,6 @@
         kdeconnect
         steam
         nh
-        vscode
       ];
     };
 

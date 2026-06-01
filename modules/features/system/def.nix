@@ -13,7 +13,7 @@
         locale
         nixpkgs
         power-management
-        preservation
+        # preservation
         system-packages
       ];
     };

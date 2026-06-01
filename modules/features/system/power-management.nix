@@ -5,9 +5,5 @@
     {
       services.upower.enable = true; # 电池电量支持
       services.power-profiles-daemon.enable = true; # 电源模式切换
-
-      preservation.preserveAt."/persistent".directories = [
-        "/var/lib/power-profiles-daemon"
-      ];
     };
 }

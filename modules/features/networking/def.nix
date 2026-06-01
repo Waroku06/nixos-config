@@ -6,7 +6,6 @@
       imports = with self.nixosModules; [
         networkmanager
         proxy
-        auto-clash
       ];
     };
 

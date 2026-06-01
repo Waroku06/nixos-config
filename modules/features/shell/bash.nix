@@ -1,13 +1,5 @@
 { self, inputs, ... }:
 {
-  flake.nixosModules.bash =
-    { ... }:
-    {
-      preservation.preserveAt."/persistent".users.waroku06.files = [
-        ".bash_history"
-      ];
-    };
-
   flake.homeModules.bash =
     { pkgs, lib, ... }:
     {

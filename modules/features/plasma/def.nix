@@ -4,12 +4,6 @@
     { pkgs, lib, ... }:
     {
       services.desktopManager.plasma6.enable = true;
-
-      preservation.preserveAt."/persistent".users.waroku06.directories = [
-        ".config/kwalletd"
-        ".local/share/kscreen"
-        ".local/share/kwalletd"
-      ];
     };
 
   flake.homeModules.plasma = _: {

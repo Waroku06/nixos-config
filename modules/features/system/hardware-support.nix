@@ -18,9 +18,5 @@
         };
         bluetooth.enable = true;
       };
-
-      preservation.preserveAt."/persistent".directories = [
-        "/var/lib/bluetooth"
-      ];
     };
 }

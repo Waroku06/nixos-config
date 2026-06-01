@@ -1,13 +1,5 @@
 { self, inputs, ... }:
 {
-  flake.nixosModules.fish =
-    { ... }:
-    {
-      preservation.preserveAt."/persistent".users.waroku06.directories = [
-        ".local/share/fish"
-      ];
-    };
-
   flake.homeModules.fish =
     { pkgs, lib, ... }:
     {

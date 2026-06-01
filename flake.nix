@@ -33,7 +33,7 @@
     # 等换设备之后再启用
     # disko.url = "github:nix-community/disko";
     # disko.inputs.nixpkgs.follows = "nixpkgs";
-    preservation.url = "github:nix-community/preservation";
+    # preservation.url = "github:nix-community/preservation";
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
     wrapper-modules.url = "github:BirdeeHub/nix-wrapper-modules";

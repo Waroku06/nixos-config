@@ -1,13 +1,5 @@
 { self, inputs, ... }:
 {
-  flake.nixosModules.auto-clash =
-    { ... }:
-    {
-      preservation.preserveAt."/persistent".users.waroku06.directories = [
-        "clash"
-      ];
-    };
-
   flake.homeModules.auto-clash =
     { pkgs, ... }:
     {
