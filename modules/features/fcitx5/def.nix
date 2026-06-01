@@ -35,6 +35,10 @@
         QT5_IM_MODULE = "fcitx";
         XMODIFIERS = "@im=fcitx";
       };
+
+      preservation.preserveAt."/persistent".users.waroku06.directories = [
+        ".local/share/fcitx5"
+      ];
     };
   flake.homeModules.fcitx5 = _: {
     home.file.".local/share/fcitx5/rime/default.custom.yaml".text = ''

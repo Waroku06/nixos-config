@@ -17,5 +17,9 @@
       # rtkit 非必需但推荐
       security.rtkit.enable = true;
       services.pulseaudio.enable = false;
+
+      preservation.preserveAt."/persistent".users.waroku06.directories = [
+        ".local/state/wireplumber"
+      ];
     };
 }
