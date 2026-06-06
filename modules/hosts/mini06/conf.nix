@@ -21,13 +21,34 @@
       system.stateVersion = "26.05"; # 不要更改这一项，除非你知道自己在做什么
     };
   flake.nixosModules.minifeatures =
-    { ... }:
+    { pkgs, ... }:
     {
       imports = with self.nixosModules; [
-        fcitx5
         networking
-        niri
-        system
+        bootloader
+        disko
+        locale
+        preservation
+        system-packages
       ];
+      services.xserver = {
+        enable = true;
+        desktopManager.lxqt.enable = true;
+        excludePackages = with pkgs; [ xterm ];
+      };
+      services.displayManager.sddm.enable = true;
+      services.displayManager.defaultSession = "lxqt";
+      nix.settings = {
+        substituters = [
+          "https://mirrors.ustc.edu.cn/nix-channels/store"
+          "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
+          "https://cache.nixos.org/"
+        ];
+        trusted-public-keys = [
+          "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
+        ];
+        auto-optimise-store = true;
+      };
+      nixpkgs.config.allowUnfree = true;
     };
 }

@@ -34,12 +34,19 @@
             "Pictures"
             "文档"
             "图片"
+            "clash"
+            "aboutmath"
+            ".local/share/fish"
+            ".local/share/Steam"
           ];
-          #   files = [
-          #
-          #   ];
+          files = [
+            ".bash_history"
+          ];
         };
       };
     };
+    # systemd-machine-id-commit.service would fail but it is not relevant
+    # in this specific setup for a persistent machine-id so we disable it
+    systemd.suppressedSystemUnits = [ "systemd-machine-id-commit.service" ];
   };
 }

@@ -21,7 +21,7 @@
 
       users.users.waroku06 = {
         isNormalUser = true;
-        hashedPasswordFile = "/persist/passwd";
+        hashedPasswordFile = "/persist/passwd"; # TODO 如果不使用 disko，请务必注释掉这一行
         extraGroups = [
           "wheel"
           "networkmanager"
