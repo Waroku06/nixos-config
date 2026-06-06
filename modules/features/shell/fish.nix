@@ -12,8 +12,8 @@
         shellAbbrs = {
           f = "fastfetch";
           rc2nix = "nix run github:nix-community/plasma-manager > plasma.nix";
-          mathematica = "/home/waroku06/Wolfram/Wolfram/14.3/Executables/WolframNB"; # 请先进入 fhs
-          maple = "_JAVA_AWT_WM_NONREPARENTING=1 /home/waroku06/maple2022/bin/xmaple"; # 请先进入 fhs
+          mathematica = "steam-run /home/waroku06/Wolfram/Wolfram/14.3/Executables/WolframNB";
+          maple = "_JAVA_AWT_WM_NONREPARENTING=1 steam-run /home/waroku06/maple2022/bin/xmaple";
         };
       };
       programs.bash = {
