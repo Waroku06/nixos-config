@@ -8,6 +8,7 @@
         default = "http://127.0.0.1:7890";
         httpProxy = "http://127.0.0.1:7890";
         httpsProxy = "http://127.0.0.1:7890";
+        allProxy = "socks5://127.0.0.1:7891";
         noProxy = "localhost,127.0.0.1,::1,*.local";
       };
     };

@@ -8,12 +8,13 @@
         bootloader
         # cachyos-gamemode
         desktop-session
+        disko
         fhs-env
         hardware-support
         locale
         nixpkgs
         power-management
-        # preservation
+        preservation
         system-packages
       ];
     };

@@ -9,7 +9,6 @@
         wget
         curl
         tree
-        sshfs
       ];
 
       # 默认 vim 编辑器

@@ -21,6 +21,7 @@
 
       users.users.waroku06 = {
         isNormalUser = true;
+        hashedPasswordFile = "/persist/passwd";
         extraGroups = [
           "wheel"
           "networkmanager"
@@ -42,6 +43,6 @@
       home.username = "waroku06";
       home.homeDirectory = "/home/waroku06";
 
-      home.stateVersion = "25.11"; # 不要更改这一项，除非你知道自己在做什么
+      home.stateVersion = "26.05"; # 不要更改这一项，除非你知道自己在做什么
     };
 }
