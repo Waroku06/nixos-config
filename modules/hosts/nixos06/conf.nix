@@ -18,6 +18,6 @@
       # 将当前 Generation 的配置文件置于 /etc/nixos-config 目录下备用
       environment.etc."nixos-config".source = inputs.self;
 
-      system.stateVersion = "26.05"; # 不要更改这一项，除非你知道自己在做什么
+      system.stateVersion = "25.11"; # 不要更改这一项，除非你知道自己在做什么
     };
 }

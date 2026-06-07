@@ -1,10 +1,10 @@
 { self, inputs, ... }:
 {
   flake.homeModules.development-tools =
-    { pkgs, pkgs-pkun, ... }:
+    { pkgs, pkgs-stable, ... }:
     {
       home.packages = with pkgs; [
-        pkgs-pkun.sage
+        # pkgs-stable.sage
         # Nix 语法支持
         nil
         nixd
