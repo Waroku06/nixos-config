@@ -1,5 +1,6 @@
 { self, inputs, ... }:
 {
+  # TODO 请根据需要增删下面的目录和文件，未被声明的目录和文件会存储在 tmpfs 中，重启后会丢失
   flake.nixosModules.preservation = _: {
     imports = [ inputs.preservation.nixosModules.default ];
     boot.tmp.cleanOnBoot = true;
@@ -9,7 +10,10 @@
         directories = [
           "/etc/nixos"
           "/etc/NetworkManager/system-connections"
-          "/tmp"
+          {
+            directory = "/tmp";
+            mode = "1777";
+          }
           "/var/lib/bluetooth"
           "/var/lib/systemd/timers"
           "/var/log"
@@ -32,12 +36,21 @@
             "linshi0606"
             "Documents"
             "Pictures"
-            "文档"
-            "图片"
             "clash"
             "aboutmath"
             ".local/share/fish"
             ".local/share/Steam"
+            # preservation 默认挂载中文会有问题，所以需要特殊处理
+            {
+              directory = "文档";
+              how = "symlink";
+              createLinkTarget = true;
+            }
+            {
+              directory = "图片";
+              how = "symlink";
+              createLinkTarget = true;
+            }
           ];
           files = [
             ".bash_history"

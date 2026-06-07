@@ -36,8 +36,6 @@
         desktopManager.lxqt.enable = true;
         excludePackages = with pkgs; [ xterm ];
       };
-      services.displayManager.sddm.enable = true;
-      services.displayManager.defaultSession = "lxqt";
       nix.settings = {
         substituters = [
           "https://mirrors.ustc.edu.cn/nix-channels/store"

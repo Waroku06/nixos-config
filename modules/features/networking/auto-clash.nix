@@ -11,7 +11,7 @@
           Wants = [ "network-online.target" ];
         };
         Service = {
-          ExecStart = "${pkgs.fish}/bin/fish -c '/home/waroku06/clash/clash -d /home/waroku06/clash/'";
+          ExecStart = "${pkgs.bash}/bin/bash -c '/home/waroku06/clash/clash -d /home/waroku06/clash/'";
           Restart = "on-failure";
           RestartSec = "5s";
         };
