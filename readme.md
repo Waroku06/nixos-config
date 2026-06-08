@@ -1,7 +1,7 @@
 # 基本信息
 这是我的 NixOS 个人配置仓库。
 
-此配置使用 KDE Plasma + Niri(Noctalia) 桌面环境，使用[`Dendritic Pattern`](https://github.com/mightyiam/dendritic)维护配置，使用[`disko`](https://github.com/nix-community/disko)进行声明式硬盘分区，使用[`preservation`](https://github.com/nix-community/preservation)保持系统无状态。软件源主要使用[`unstable`](https://github.com/nixos/nixpkgs/tree/nixos-unstable)分支，也有最新的[`stable`](https://github.com/nixos/nixpkgs/tree/nixos-26.05)分支以及[`nixpkgs-unstable`](https://github.com/nixos/nixpkgs/tree/nixpkgs-unstable)分支可选。
+此配置使用 KDE Plasma + Niri(Noctalia) 桌面环境，使用[`Dendritic Pattern`](https://github.com/mightyiam/dendritic)维护配置，提供[`disko`](https://github.com/nix-community/disko)配置进行声明式硬盘分区，以及[`preservation`](https://github.com/nix-community/preservation)配置保持系统无状态。软件源主要使用[`unstable`](https://github.com/nixos/nixpkgs/tree/nixos-unstable)分支，也有最新的[`stable`](https://github.com/nixos/nixpkgs/tree/nixos-26.05)分支以及[`nixpkgs-unstable`](https://github.com/nixos/nixpkgs/tree/nixpkgs-unstable)分支可选。
 
 此配置为自用，或许可以面向没有开发工作并且轻度使用电脑的桌面端用户。
 

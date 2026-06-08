@@ -33,16 +33,25 @@
         # Preserve user files
         users.waroku06 = {
           directories = [
-            "linshi0606"
+            ".cache"
+            ".local"
+            ".config"
+            ".wine"
+            ".steam"
+            "nixos-config"
             "Documents"
             "Pictures"
+            "linshi0606"
             "clash"
             "aboutmath"
-            ".local/share/fish"
-            ".local/share/Steam"
             # preservation 默认挂载中文会有问题，所以需要特殊处理
             {
               directory = "文档";
+              how = "symlink";
+              createLinkTarget = true;
+            }
+            {
+              directory = "下载";
               how = "symlink";
               createLinkTarget = true;
             }

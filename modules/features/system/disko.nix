@@ -16,7 +16,7 @@
     };
 
     disko.devices.disk.main = {
-      # TODO 需要把目标硬盘的 ID 写在这里，通过以下命令查看: ls -l /dev/disk/by-id
+      # TODO 需要把目标设备写在这里，推荐使用 ID，通过以下命令查看: ls -l /dev/disk/by-id
       device = "/dev/disk/by-id/nvme-UMIS_RPJYJ512MKN1QWY_SS1K16471Z2CD3AY2373";
       type = "disk";
       content.type = "gpt";

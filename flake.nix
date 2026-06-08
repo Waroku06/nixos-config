@@ -7,6 +7,10 @@
       url = "github:nix-community/home-manager";
       inputs.nixpkgs.follows = "nixpkgs";
     };
+    nur = {
+      url = "github:nix-community/NUR";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
 
     flake-parts.url = "github:hercules-ci/flake-parts";
     import-tree.url = "github:vic/import-tree";
@@ -29,10 +33,6 @@
       # Note that this may break the reproducibility mentioned above, and you might not be able to access the binary cache
       #
       # inputs.nixpkgs.follows = "nixpkgs";
-    };
-    nur = {
-      url = "github:nix-community/NUR";
-      inputs.nixpkgs.follows = "nixpkgs";
     };
     nix-alien.url = "github:thiagokokada/nix-alien";
     plangothic = {
