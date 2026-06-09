@@ -1,6 +1,8 @@
 { self, inputs, ... }:
 {
   flake.nixosModules.disko = _: {
+    # TODO 这里的配置是结合 preservation 模块的，如有需要请自行调整
+
     imports = [ inputs.disko.nixosModules.disko ];
     fileSystems."/nix".neededForBoot = true;
     fileSystems."/persist".neededForBoot = true; # sometimes needed too
@@ -55,6 +57,7 @@
             "/persist" = {
               mountOptions = [
                 "subvol=persist"
+                "compress=zstd:1"
                 "noatime"
               ];
               mountpoint = "/persist";
@@ -62,6 +65,7 @@
             "/nix" = {
               mountOptions = [
                 "subvol=nix"
+                "compress=zstd:1"
                 "noatime"
               ];
               mountpoint = "/nix";

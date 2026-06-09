@@ -4,7 +4,7 @@
     { pkgs, pkgs-stable, ... }:
     {
       home.packages = with pkgs; [
-        # pkgs-stable.sage
+        pkgs-stable.sage
         # Nix 语法支持
         nil
         nixd
