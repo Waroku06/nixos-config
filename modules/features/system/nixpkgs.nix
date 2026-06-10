@@ -1,19 +1,31 @@
 { self, inputs, ... }:
+let
+  pc =
+    { t, s }:
+    import t {
+      system = s;
+      config.allowUnfree = true;
+    };
+  mkpk = s: {
+    pkgs-stable = pc {
+      t = inputs.nixpkgs-stable;
+      inherit s;
+    };
+    pkgs-pkun = pc {
+      t = inputs.nixpkgs-pkun;
+      inherit s;
+    };
+    pkgs-small = pc {
+      t = inputs.nixpkgs-small;
+      inherit s;
+    };
+  };
+in
 {
   flake.nixosModules.nixpkgs =
     { pkgs, ... }:
     let
       system = pkgs.stdenv.hostPlatform.system;
-      pkgx = {
-        pkgs-stable = import inputs.nixpkgs-stable {
-          inherit system;
-          config.allowUnfree = true;
-        };
-        pkgs-pkun = import inputs.nixpkgs-pkun {
-          inherit system;
-          config.allowUnfree = true;
-        };
-      };
     in
     {
       # 镜像源 flakes nixpkgs 等
@@ -36,7 +48,12 @@
         inputs.nur.overlays.default
       ];
       nixpkgs.config.allowUnfree = true;
-      _module.args = pkgx;
-      home-manager.extraSpecialArgs = pkgx;
+      _module.args = mkpk system;
+      home-manager.extraSpecialArgs = mkpk system;
+    };
+  perSystem =
+    { system, ... }:
+    {
+      _module.args = mkpk system;
     };
 }

@@ -51,8 +51,7 @@
           };
 
           binds = {
-
-            "Mod+Return".spawn = lib.getExe pkgs.kitty;
+            "Mod+Return".spawn = lib.getExe self'.packages.Kitty06;
             "Mod+S".spawn-sh = "${lib.getExe self'.packages.Noctalia06} ipc call launcher toggle";
             "Mod+Q".close-window = _: { };
             "Mod+F".maximize-column = _: { };

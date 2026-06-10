@@ -8,10 +8,25 @@
       };
     };
   flake.homeModules.kitty =
-    { pkgs, lib, ... }:
+    { pkgs, ... }:
     {
       programs.kitty = {
         enable = true;
+        package = self.packages.${pkgs.stdenv.hostPlatform.system}.Kitty06;
+      };
+    };
+
+  perSystem =
+    {
+      pkgs,
+      pkgs-small,
+      lib,
+      self',
+      ...
+    }:
+    {
+      packages.Kitty06 = inputs.wrapper-modules.wrappers.kitty.wrap {
+        pkgs = pkgs-small;
         settings = {
           enable_audio_bell = "no";
 

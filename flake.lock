@@ -336,6 +336,22 @@
         "type": "github"
       }
     },
+    "nixpkgs-small": {
+      "locked": {
+        "lastModified": 1781074563,
+        "narHash": "sha256-md8WlXOlfnIeHeOScMTTHFyf2d6iaTwPl2apR5EQ3P4=",
+        "owner": "nixos",
+        "repo": "nixpkgs",
+        "rev": "9ae611a455b90cf061d8f332b977e387bda8e1ca",
+        "type": "github"
+      },
+      "original": {
+        "owner": "nixos",
+        "ref": "nixos-unstable-small",
+        "repo": "nixpkgs",
+        "type": "github"
+      }
+    },
     "nixpkgs-stable": {
       "locked": {
         "lastModified": 1780734595,
@@ -531,6 +547,7 @@
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_4",
         "nixpkgs-pkun": "nixpkgs-pkun",
+        "nixpkgs-small": "nixpkgs-small",
         "nixpkgs-stable": "nixpkgs-stable",
         "nur": "nur",
         "plangothic": "plangothic",
