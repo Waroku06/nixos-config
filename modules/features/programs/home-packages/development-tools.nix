@@ -5,6 +5,7 @@
     {
       home.packages = with pkgs; [
         pkgs-stable.sage
+        geogebra6
         # Nix 语法支持
         nil
         nixd
