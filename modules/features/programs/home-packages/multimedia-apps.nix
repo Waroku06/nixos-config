@@ -9,6 +9,7 @@
         vlc
         haruna
         obs-studio
+        krita
       ];
     };
 }
