@@ -6,7 +6,7 @@
       services.desktopManager.plasma6.enable = true;
     };
 
-  flake.homeModules.plasma = _: {
+  flake.homeModules.plasma = { pkgs, lib, ... }: { 
     # Plasma Manager 配置
     programs.plasma = {
       enable = true;

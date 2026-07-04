@@ -14,5 +14,8 @@
         # LaTeX 支持
         texliveFull
       ];
+      programs.vscode.profiles.default.extensions = with pkgs.vscode-extensions; [
+        james-yu.latex-workshop
+      ];
     };
 }
