@@ -8,13 +8,13 @@
       ];
     };
   flake.homeModules.game =
-    { pkgs, ... }:
+    { pkgs, pkgs-small, ... }:
     {
       home.packages = with pkgs; [
         wineWow64Packages.unstable
         winetricks
         vulkan-loader
-        vulkan-validation-layers
+        pkgs-small.vulkan-validation-layers
         vulkan-tools
         inputs.prismlauncher.packages.${pkgs.stdenv.hostPlatform.system}.prismlauncher # Minecraft 启动器
       ];

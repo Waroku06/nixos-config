@@ -8,26 +8,14 @@
       };
     };
   flake.homeModules.kitty =
-    { pkgs, ... }:
+    { pkgs-small, ... }:
     {
       programs.kitty = {
         enable = true;
-        package = self.packages.${pkgs.stdenv.hostPlatform.system}.Kitty06;
-      };
-    };
-
-  perSystem =
-    {
-      pkgs,
-      pkgs-small,
-      lib,
-      self',
-      ...
-    }:
-    {
-      packages.Kitty06 = inputs.wrapper-modules.wrappers.kitty.wrap {
-        pkgs = pkgs-small;
+        shellIntegration.enableFishIntegration = true;
         settings = {
+          shell = "fish";
+
           enable_audio_bell = "no";
 
           font_size = 13;
@@ -63,6 +51,7 @@
           selection_foreground = "#303446";
           selection_background = "#c6d0f5";
         };
+        package = pkgs-small.kitty;
       };
     };
 }

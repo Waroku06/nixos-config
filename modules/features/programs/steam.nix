@@ -3,6 +3,7 @@
   flake.nixosModules.steam =
     { pkgs, lib, ... }:
     {
+      # Steam 在 Niri 下黑屏的解决方案
       nixpkgs.overlays = [
         (final: prev: {
           steam = prev.steam.override {

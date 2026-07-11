@@ -10,6 +10,7 @@
         niri
         plasma
         programs
+        shell
         system
         terminal
         virtualisation
