@@ -8,7 +8,7 @@
       };
     };
   flake.homeModules.kitty =
-    { pkgs-small, ... }:
+    { pkgs, ... }:
     {
       programs.kitty = {
         enable = true;
@@ -51,7 +51,6 @@
           selection_foreground = "#303446";
           selection_background = "#c6d0f5";
         };
-        package = pkgs-small.kitty;
       };
     };
 }
