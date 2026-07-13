@@ -44,7 +44,7 @@
             "linshi0606"
             "clash"
             "aboutmath"
-            # preservation 默认挂载中文会有问题，所以需要特殊处理
+            # preservation 默认挂载中文会有问题，所以改用软链接的方式
             {
               directory = "文档";
               how = "symlink";
