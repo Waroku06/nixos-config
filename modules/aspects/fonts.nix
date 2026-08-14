@@ -1,7 +1,11 @@
 { inputs, ... }: {
   flake-file.inputs = {
-    plangothic = {
-      url = "github:Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project";
+    plangothicP1 = {
+      url = "file+https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project/releases/download/V2.9.5795/PlangothicP1-Regular.ttf";
+      flake = false;
+    };
+    plangothicP2 = {
+      url = "file+https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project/releases/download/V2.9.5795/PlangothicP2-Regular.ttf";
       flake = false;
     };
   };
@@ -9,10 +13,8 @@
     homeManager = {
       # 使用遍黑体，显示更多生僻汉字
       home.file = {
-        ".local/share/fonts/PlangothicP1_Regular.ttf".source =
-          "${inputs.plangothic}/fonts/static/PlangothicP1-Regular.ttf";
-        ".local/share/fonts/PlangothicP2_Regular.ttf".source =
-          "${inputs.plangothic}/fonts/static/PlangothicP2-Regular.ttf";
+        ".local/share/fonts/PlangothicP1_Regular.ttf".source = inputs.plangothicP1;
+        ".local/share/fonts/PlangothicP2_Regular.ttf".source = inputs.plangothicP2;
       };
       fonts.fontconfig.enable = true;
     };

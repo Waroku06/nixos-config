@@ -84,7 +84,7 @@
     "flake-parts": {
       "inputs": {
         "nixpkgs-lib": [
-          "nixpkgs-lib"
+          "nixpkgs"
         ]
       },
       "locked": {
@@ -427,20 +427,28 @@
         "type": "github"
       }
     },
-    "plangothic": {
+    "plangothicP1": {
       "flake": false,
       "locked": {
-        "lastModified": 1785932246,
-        "narHash": "sha256-2tQ5WFGNhHkfJk6f9WIcIZdQxAbH9f3g8PqwQNSti3k=",
-        "owner": "Fitzgerald-Porthmouth-Koenigsegg",
-        "repo": "Plangothic_Project",
-        "rev": "cfcb7cc869562443d6c6f85c935d0dd8dbdd69b6",
-        "type": "github"
+        "narHash": "sha256-E5LkZhgimGqqzsenR4S1zUT9vzn2gsHWHiEZxV+73XE=",
+        "type": "file",
+        "url": "https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project/releases/download/V2.9.5795/PlangothicP1-Regular.ttf"
       },
       "original": {
-        "owner": "Fitzgerald-Porthmouth-Koenigsegg",
-        "repo": "Plangothic_Project",
-        "type": "github"
+        "type": "file",
+        "url": "https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project/releases/download/V2.9.5795/PlangothicP1-Regular.ttf"
+      }
+    },
+    "plangothicP2": {
+      "flake": false,
+      "locked": {
+        "narHash": "sha256-iR6du6pxbJeni08AOuKBOrtGghfh9kKNaNvMYUzlUpc=",
+        "type": "file",
+        "url": "https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project/releases/download/V2.9.5795/PlangothicP2-Regular.ttf"
+      },
+      "original": {
+        "type": "file",
+        "url": "https://github.com/Fitzgerald-Porthmouth-Koenigsegg/Plangothic_Project/releases/download/V2.9.5795/PlangothicP2-Regular.ttf"
       }
     },
     "plasma-manager": {
@@ -512,14 +520,12 @@
         "nix-cachyos-kernel": "nix-cachyos-kernel",
         "nixos-hardware": "nixos-hardware",
         "nixpkgs": "nixpkgs_4",
-        "nixpkgs-lib": [
-          "nixpkgs"
-        ],
         "nixpkgs-pkun": "nixpkgs-pkun",
         "nixpkgs-small": "nixpkgs-small",
         "nixpkgs-stable": "nixpkgs-stable",
         "nur": "nur",
-        "plangothic": "plangothic",
+        "plangothicP1": "plangothicP1",
+        "plangothicP2": "plangothicP2",
         "plasma-manager": "plasma-manager",
         "preservation": "preservation",
         "prismlauncher": "prismlauncher"
