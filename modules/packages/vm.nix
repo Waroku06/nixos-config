@@ -5,7 +5,13 @@
 {
 
   # USER TODO: 此配置不要给真机
-  den.aspects.mini06.includes = [ (<den/tty-autologin> "stickman") ];
+  den.aspects.mini06 = {
+    includes = [ (<den/tty-autologin> "stickman") ];
+    nixos.users.users.stickman = {
+      isNormalUser = true;
+      group = "users";
+    };
+  };
 
   perSystem =
     { pkgs, ... }:

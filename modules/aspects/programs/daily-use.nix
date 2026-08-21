@@ -1,12 +1,12 @@
 {
   den.ful.programs.daily-use.homeManager =
-    { pkgs, ... }:
+    { pkgs, pkgs-stable, ... }:
     {
       # 常用软件
       home.packages = with pkgs; [
         qq
         wechat
-        obsidian
+        pkgs-stable.obsidian
         libreoffice
         wpsoffice-cn
         yazi

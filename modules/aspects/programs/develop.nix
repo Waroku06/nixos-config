@@ -1,4 +1,4 @@
-{
+{ ... }: {
   den.ful.programs.develop.homeManager =
     { pkgs, pkgs-stable, ... }:
     {
@@ -14,6 +14,7 @@
         texliveFull
       ];
       programs.opencode.enable = true;
+      programs.codex.enable = true;
       programs.git = {
         enable = true;
         settings = {
