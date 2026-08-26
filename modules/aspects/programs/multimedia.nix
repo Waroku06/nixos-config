@@ -1,9 +1,9 @@
 {
   den.ful.programs.multimedia.homeManager = { pkgs, pkgs-small, ... }: {
     home.packages = with pkgs; [
-      pkgs-small.mpv
+      mpv
       vlc
-      pkgs-small.haruna
+      haruna
       obs-studio
       krita
       subtitlecomposer

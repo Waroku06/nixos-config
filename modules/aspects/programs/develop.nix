@@ -12,6 +12,7 @@
         nixfmt
         # LaTeX 支持
         texliveFull
+        cc-switch
       ];
       programs.opencode.enable = true;
       programs.codex.enable = true;

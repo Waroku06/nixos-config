@@ -80,6 +80,8 @@
           };
         };
       };
+      users.users.${user.name}.hashedPasswordFile = "/persist/passwd";
+
       preservation = {
         enable = true;
         preserveAt."/persist" = {

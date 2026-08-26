@@ -1,7 +1,7 @@
 # 基本信息
 这是我的 NixOS 个人配置仓库。
 
-此配置使用 KDE Plasma + Niri(Noctalia) 桌面环境，使用[`Dendritic Pattern`](https://github.com/mightyiam/dendritic)维护配置，提供[`disko`](https://github.com/nix-community/disko)配置进行声明式硬盘分区，以及[`preservation`](https://github.com/nix-community/preservation)配置保持系统无状态。软件源主要使用[`unstable`](https://github.com/nixos/nixpkgs/tree/nixos-unstable)分支，也有最新的[`stable`](https://github.com/nixos/nixpkgs/tree/nixos-26.05)分支、[`nixpkgs-unstable`](https://github.com/nixos/nixpkgs/tree/nixpkgs-unstable)分支、以及[`nixos-unstable-small`](https://github.com/NixOS/nixpkgs/tree/nixos-unstable-small)分支可选。
+此配置使用 KDE Plasma 桌面环境，使用[`Dendritic Pattern`](https://github.com/mightyiam/dendritic)维护配置，提供[`disko`](https://github.com/nix-community/disko)配置进行声明式硬盘分区，以及[`preservation`](https://github.com/nix-community/preservation)配置保持系统无状态。软件源主要使用[`unstable`](https://github.com/nixos/nixpkgs/tree/nixos-unstable)分支，也有最新的[`stable`](https://github.com/nixos/nixpkgs/tree/nixos-26.05)分支、[`nixpkgs-unstable`](https://github.com/nixos/nixpkgs/tree/nixpkgs-unstable)分支、以及[`nixos-unstable-small`](https://github.com/NixOS/nixpkgs/tree/nixos-unstable-small)分支可选。
 
 此配置为自用，或许可以面向没有开发工作并且轻度使用电脑的桌面端用户。
 
@@ -11,8 +11,6 @@
 | `mini06`：我的最小化配置（带桌面）  | 实验中 |
 
 `assets`文件夹下包含了[壁纸](https://pixiv.net/artworks/121023003)与自制 NixOS Logo.
-
-**在我的电脑上的已知问题：在静音模式下注销，重新登录之后静音可能会自动解除。**
 
 关于如何安装，可以参考 [NixOS 安装指南](https://github.com/Waroku06/nixos-config/wiki/NixOS-%E5%AE%89%E8%A3%85%E6%8C%87%E5%8D%97)。
 
@@ -37,3 +35,6 @@
 
 [ryan4yin/nix-config](https://github.com/ryan4yin/nix-config)
 
+[Adda/nixos-config](https://codeberg.org/Adda/nixos-config)
+
+[RafaelMuijsert/nixos-config](https://github.com/RafaelMuijsert/nixos-config)

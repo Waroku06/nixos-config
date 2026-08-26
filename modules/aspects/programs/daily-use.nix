@@ -6,7 +6,7 @@
       home.packages = with pkgs; [
         qq
         wechat
-        pkgs-stable.obsidian
+        obsidian
         libreoffice
         wpsoffice-cn
         yazi
