@@ -6,6 +6,7 @@
   };
   den.ful.gui.plasma = { user, ... }: {
     nixos.services.desktopManager.plasma6.enable = true;
+    nixos.environment.sessionVariables.NIXOS_OZONE_WL = "1";
     homeManager = {
       imports = [
         inputs.plasma-manager.homeModules.plasma-manager
@@ -15,7 +16,7 @@
         shortcuts = {
           "services/kitty.desktop"._launch = "Ctrl+Alt+T";
         };
-        # 壁纸：建议换成你自己稳定放置的路径
+        # 壁纸路径
         kscreenlocker.appearance.wallpaper = "${self}/assets/wallpaper/121023003.jpg";
         workspace.wallpaper = "${self}/assets/wallpaper/121023003.jpg";
         workspace.lookAndFeel = "org.kde.breeze.desktop";
@@ -42,7 +43,7 @@
           katerc."KTextEditor Renderer"."Text Font" = "Monospace,10,-1,5,400,0,0,0,0,0,0,0,0,0,0,1";
           katerc.lspclient.AllowedServerCommandLines = "/etc/profiles/per-user/${user.name}/bin/marksman server,/etc/profiles/per-user/${user.name}/bin/nil";
           klipperrc.General.IgnoreImages = false;
-          klipperrc.General.MaxClipItems = 1000; # 剪贴板最多保留 1000 条
+          klipperrc.General.MaxClipItems = 1000; # 剪贴板保留 1000 条
           # 光标主题
           kcminputrc.Mouse.cursorTheme = "Breeze_Light";
           # 面板配置
@@ -64,7 +65,7 @@
             "{\"layoutDirection\":\"horizontal\",\"tiles\":[{\"width\":0.25},{\"width\":0.5},{\"width\":0.25}]}";
           kwinrc."Tiling/dc4f0d9d-2445-5410-ad63-6576a9a37b88".tiles =
             "{\"layoutDirection\":\"horizontal\",\"tiles\":[{\"width\":0.25},{\"width\":0.5},{\"width\":0.25}]}";
-          # Wayland 下输入法
+          # 输入法
           kwinrc.Wayland."InputMethod[$e]" =
             "/run/current-system/sw/share/applications/fcitx5-wayland-launcher.desktop";
           # 缩放
@@ -73,7 +74,7 @@
           # 桌面数量
           kwinrc.Desktops.Number = 1;
           kwinrc.Desktops.Rows = 1;
-          # 桌面特效：惯性晃动、粉碎动画、透明度
+          # 桌面特效
           kwinrc.Plugins.fallapartEnabled = true;
           kwinrc.Plugins.translucencyEnabled = true;
           kwinrc.Plugins.wobblywindowsEnabled = true;
