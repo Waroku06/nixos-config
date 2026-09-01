@@ -14,7 +14,24 @@ in
   _module.args.__findFile = den.lib.__findFile;
   # 默认启用 homeManager
   den.schema.user.classes = lib.mkDefault [ "homeManager" ];
-  flake-file.inputs.nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+  flake-file = {
+    nixConfig = {
+      lazy-trees = true;
+      accept-flake-config = true;
+      auto-optimise-store = true;
+      use-xdg-base-directories = true;
+      show-trace = true;
+      extra-substituters = [
+        "https://cache.xinux.uz"
+        "https://attic.xuyh0120.win/lantian" # cachy
+      ];
+      extra-trusted-public-keys = [
+        "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0=" # xinux
+        "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc="
+      ];
+    };
+    inputs.nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+  };
   # 全局设置
   den.default = {
     nixos = { pkgs, ... }: {
@@ -56,14 +73,6 @@ in
         efi.canTouchEfiVariables = true;
       };
       # 默认使用 cachyos 内核
-      nix.settings = {
-        substituters = [
-          "https://attic.xuyh0120.win/lantian" # cachyos-kernel
-        ];
-        trusted-public-keys = [
-          "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc=" # cachyos-kernel
-        ];
-      };
       nixpkgs.overlays = [
         inputs.nix-cachyos-kernel.overlays.pinned
       ];

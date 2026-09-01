@@ -3,7 +3,33 @@
 {
   outputs = inputs: inputs.flake-parts.lib.mkFlake { inherit inputs; } (inputs.import-tree ./modules);
 
+  nixConfig = {
+    accept-flake-config = true;
+    auto-optimise-store = true;
+    extra-substituters = [
+      "https://cache.xinux.uz"
+      "https://attic.xuyh0120.win/lantian"
+      "https://prismlauncher.cachix.org"
+    ];
+    extra-trusted-public-keys = [
+      "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0="
+      "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc="
+      "prismlauncher.cachix.org-1:9/n/FGyABA2jLUVfY+DEp4hKds/rwO+SCOtbOkDzd+c="
+    ];
+    lazy-trees = true;
+    show-trace = true;
+    use-xdg-base-directories = true;
+  };
+
   inputs = {
+    codex-cli-nix = {
+      url = "github:sadjow/codex-cli-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    codex-desktop-linux = {
+      url = "github:ilysenko/codex-desktop-linux";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
     den.url = "github:denful/den";
     disko = {
       url = "github:nix-community/disko";

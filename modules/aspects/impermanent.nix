@@ -1,4 +1,10 @@
 { inputs, ... }: {
+  # TODO 要使用这个模块，请在 den.aspects.<主机名>.includes 中
+  # 写入 (<impermanent> "/dev/disk/by-id/..." x)，其中
+  # "/dev/disk/by-id/..." 是目标硬盘 ID
+  # x 是一个数字，代表 Swap 分区为 x GiB
+  # 可以通过 ls -l /dev/disk/by-id 来查看硬盘 ID
+  # TODO 请根据自行需求修改本文件
   flake-file.inputs = {
     preservation.url = "github:nix-community/preservation";
     disko.url = "github:nix-community/disko";

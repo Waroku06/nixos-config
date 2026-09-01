@@ -1,19 +1,23 @@
 { inputs, ... }: {
-  flake-file.inputs.prismlauncher = {
-    url = "github:PrismLauncher/PrismLauncher"; # Minecraft 启动器
-    # Optional: Override the nixpkgs input of prismlauncher to use the same revision as the rest of your flake
-    # Note that this may break the reproducibility mentioned above, and you might not be able to access the binary cache
-    #
-    # inputs.nixpkgs.follows = "nixpkgs";
+  flake-file = {
+    nixConfig = {
+      extra-substituters = [
+        "https://prismlauncher.cachix.org"
+      ];
+      extra-trusted-public-keys = [
+        "prismlauncher.cachix.org-1:9/n/FGyABA2jLUVfY+DEp4hKds/rwO+SCOtbOkDzd+c="
+      ];
+    };
+    inputs.prismlauncher = {
+      url = "github:PrismLauncher/PrismLauncher"; # Minecraft 启动器
+      # Optional: Override the nixpkgs input of prismlauncher to use the same revision as the rest of your flake
+      # Note that this may break the reproducibility mentioned above, and you might not be able to access the binary cache
+      #
+      # inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
   den.ful.programs.games = {
     nixos = {
-      nix.settings = {
-        trusted-substituters = [ "https://prismlauncher.cachix.org" ];
-        trusted-public-keys = [
-          "prismlauncher.cachix.org-1:9/n/FGyABA2jLUVfY+DEp4hKds/rwO+SCOtbOkDzd+c="
-        ];
-      };
       # Steam 在 Niri 下黑屏的解决方案
       nixpkgs.overlays = [
         (final: prev: {

@@ -1,7 +1,20 @@
-{ ... }: {
+{ inputs, ... }: {
+  flake-file.inputs = {
+    codex-cli-nix = {
+      url = "github:sadjow/codex-cli-nix";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    codex-desktop-linux = {
+      url = "github:ilysenko/codex-desktop-linux";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+  };
   den.ful.programs.develop.homeManager =
     { pkgs, pkgs-stable, ... }:
     {
+      programs.opencode.enable = true;
+      imports = [ inputs.codex-desktop-linux.homeManagerModules.default ];
+      programs.codexDesktopLinux.enable = true;
       home.packages = with pkgs; [
         pkgs-stable.sage
         geogebra6
@@ -13,9 +26,8 @@
         # LaTeX 支持
         texliveFull
         cc-switch
+        inputs.codex-cli-nix.packages.${pkgs.stdenv.hostPlatform.system}.codex
       ];
-      programs.opencode.enable = true;
-      programs.codex.enable = true;
       programs.git = {
         enable = true;
         settings = {
