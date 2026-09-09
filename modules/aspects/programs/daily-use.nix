@@ -1,6 +1,6 @@
 {
   den.ful.programs.daily-use.homeManager =
-    { pkgs, pkgs-stable, ... }:
+    { pkgs, ... }:
     {
       # 常用软件
       home.packages = with pkgs; [
@@ -11,7 +11,6 @@
         wpsoffice-cn
         yazi
         google-chrome
-        thunar
       ];
     };
 }

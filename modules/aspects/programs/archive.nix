@@ -4,6 +4,7 @@
     {
       # 解压缩工具
       home.packages = with pkgs; [
+        unzip
         arj
         lrzip
         lzop

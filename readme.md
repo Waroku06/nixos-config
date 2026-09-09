@@ -1,7 +1,7 @@
 # 基本信息
 这是我的 NixOS 个人配置仓库。
 
-此配置使用 KDE Plasma 桌面环境，使用[`Dendritic Pattern`](https://github.com/mightyiam/dendritic)维护配置，提供[`disko`](https://github.com/nix-community/disko)配置进行声明式硬盘分区，以及[`preservation`](https://github.com/nix-community/preservation)配置保持系统无状态。软件源主要使用[`unstable`](https://github.com/nixos/nixpkgs/tree/nixos-unstable)分支，也有最新的[`stable`](https://github.com/nixos/nixpkgs/tree/nixos-26.05)分支、[`nixpkgs-unstable`](https://github.com/nixos/nixpkgs/tree/nixpkgs-unstable)分支、以及[`nixos-unstable-small`](https://github.com/NixOS/nixpkgs/tree/nixos-unstable-small)分支可选。
+此配置使用 KDE Plasma 桌面环境，使用[`Den`](https://github.com/denful/den)维护配置，提供[`disko`](https://github.com/nix-community/disko)配置进行声明式硬盘分区，以及[`preservation`](https://github.com/nix-community/preservation)配置保持系统无状态。软件源主要使用[`unstable`](https://github.com/nixos/nixpkgs/tree/nixos-unstable)分支，也有最新的[`stable`](https://github.com/nixos/nixpkgs/tree/nixos-26.05)分支、[`nixpkgs-unstable`](https://github.com/nixos/nixpkgs/tree/nixpkgs-unstable)分支、以及[`nixos-unstable-small`](https://github.com/NixOS/nixpkgs/tree/nixos-unstable-small)分支可选。
 
 此配置为自用，或许可以面向没有开发工作并且轻度使用电脑的桌面端用户。
 
