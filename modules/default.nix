@@ -92,6 +92,13 @@ in
       ];
       # 默认 vim 编辑器
       environment.variables.EDITOR = "vim";
+      # 禁用睡眠和休眠
+      systemd.sleep.settings.Sleep = {
+        AllowSuspend = "yes"; # 如果只想禁用休眠，可以保持 Suspend 启用
+        AllowHibernation = "no"; # 禁用休眠 (Hibernate)
+        AllowHybridSleep = "no"; # 禁用混合睡眠 (Hybrid Sleep)
+        AllowSuspendThenHibernate = "no"; # 禁用先睡眠后休眠
+      };
 
       system.stateVersion = lib.mkDefault stateVersion;
     };

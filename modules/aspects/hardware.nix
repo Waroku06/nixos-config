@@ -13,6 +13,7 @@
         enable = true;
         enable32Bit = true;
       };
+      intelgpu.vaapiDriver = "intel-media-driver";
     };
   };
 }

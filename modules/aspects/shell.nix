@@ -6,7 +6,7 @@ let
     mathematica = "steam-run /home/waroku06/Wolfram/Wolfram/15.0.1/Executables/WolframNB";
     maple = "_JAVA_AWT_WM_NONREPARENTING=1 fhs /home/waroku06/maple2022/bin/xmaple";
     hm-gen = "nix-env -p ~/.local/state/nix/profiles/home-manager --list-generations";
-    pxyuns = ''export http_proxy="http://192.168.1.5:8502" && export https_proxy="http://192.168.1.5:8502" && nohup google-chrome --proxy-server="http://192.168.1.5:8502" > /dev/null 2>&1 & disown'';
+    pxyuns = ''export http_proxy="http://192.168.1.2:8502" && export https_proxy="http://192.168.1.2:8502" && nohup google-chrome --proxy-server="http://192.168.1.2:8502" > /dev/null 2>&1 & disown'';
   };
 in
 {

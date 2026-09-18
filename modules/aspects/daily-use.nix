@@ -1,4 +1,4 @@
-{ __findFile, ... }:
+{ inputs, __findFile, ... }:
 {
   den.aspects.daily-use.includes = [
     <den/hostname>
@@ -16,6 +16,10 @@
     <shell>
     <terminal>
     <virtualisation>
-    { nixos.security.sudo.wheelNeedsPassword = false; }
+    {
+      nixos.security.sudo.wheelNeedsPassword = false;
+      # 将当前 Generation 的配置文件置于 /etc/nixos-config 目录下备用
+      nixos.environment.etc."nixos-config".source = inputs.self;
+    }
   ];
 }
