@@ -1,6 +1,5 @@
 {
   lib,
-  inputs,
   den,
   __findFile,
   ...
@@ -20,7 +19,8 @@ in
       accept-flake-config = true;
       auto-optimise-store = true;
       use-xdg-base-directories = true;
-      show-trace = true;
+#       show-trace = true;
+      /* too slow...
       extra-substituters = [
         "https://cache.xinux.uz"
         "https://attic.xuyh0120.win/lantian" # cachy
@@ -29,8 +29,9 @@ in
         "cache.xinux.uz:BXCrtqejFjWzWEB9YuGB7X2MV4ttBur1N8BkwQRdH+0=" # xinux
         "lantian:EeAUQ+W+6r7EtwnmYjeVwx5kOGEBpjlBfPlzGlTNvHc="
       ];
+      */
     };
-    inputs.nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
+#     inputs.nix-cachyos-kernel.url = "github:xddxdd/nix-cachyos-kernel/release";
   };
   # 全局设置
   den.default = {
@@ -72,11 +73,12 @@ in
         };
         efi.canTouchEfiVariables = true;
       };
-      # 默认使用 cachyos 内核
-      nixpkgs.overlays = [
-        inputs.nix-cachyos-kernel.overlays.pinned
-      ];
-      boot.kernelPackages = lib.mkDefault pkgs.cachyosKernels.linuxPackages-cachyos-latest;
+      # 使用 cachyos 内核
+#       nixpkgs.overlays = [
+#         inputs.nix-cachyos-kernel.overlays.pinned
+#       ];
+      # boot.kernelPackages = lib.mkDefault pkgs.cachyosKernels.linuxPackages-cachyos-latest;
+      # too slow...
       programs.gamemode.enable = lib.mkDefault true;
 
       hardware.bluetooth.enable = true; # 蓝牙支持
@@ -94,7 +96,7 @@ in
       environment.variables.EDITOR = "vim";
       # 禁用睡眠和休眠
       systemd.sleep.settings.Sleep = {
-        AllowSuspend = "yes"; # 如果只想禁用休眠，可以保持 Suspend 启用
+        AllowSuspend = "no"; # 如果只想禁用休眠，可以保持 Suspend 启用
         AllowHibernation = "no"; # 禁用休眠 (Hibernate)
         AllowHybridSleep = "no"; # 禁用混合睡眠 (Hybrid Sleep)
         AllowSuspendThenHibernate = "no"; # 禁用先睡眠后休眠
