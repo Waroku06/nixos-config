@@ -17,16 +17,21 @@
     };
   };
   den.ful.programs.games = {
-    nixos = {
+    nixos = { pkgs, ... }: {
       # Steam 在 Niri 下黑屏的解决方案
-      nixpkgs.overlays = [
-        (final: prev: {
-          steam = prev.steam.override {
-            extraArgs = "-cef-disable-gpu-compositing";
-          };
-        })
-      ];
-      programs.steam.enable = true;
+      #       nixpkgs.overlays = [
+      #         (final: prev: {
+      #           steam = prev.steam.override {
+      #             extraArgs = "-cef-disable-gpu-compositing";
+      #           };
+      #         })
+      #       ];
+      programs.steam = {
+        enable = true;
+        extraPackages = [
+          pkgs.kdePackages.breeze
+        ];
+      };
     };
     homeManager =
       { pkgs, ... }:

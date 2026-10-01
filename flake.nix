@@ -6,15 +6,20 @@
   nixConfig = {
     accept-flake-config = true;
     auto-optimise-store = true;
-    extra-substituters = [ "https://prismlauncher.cachix.org" ];
+    extra-substituters = [
+      "https://prismlauncher.cachix.org"
+      "https://ryoppippi.cachix.org"
+    ];
     extra-trusted-public-keys = [
       "prismlauncher.cachix.org-1:9/n/FGyABA2jLUVfY+DEp4hKds/rwO+SCOtbOkDzd+c="
+      "ryoppippi.cachix.org-1:b2LbtWNvJeL/qb1B6TYOMK+apaCps4SCbzlPRfSQIms="
     ];
     lazy-trees = true;
     use-xdg-base-directories = true;
   };
 
   inputs = {
+    codex-cli-nix.url = "github:sadjow/codex-cli-nix";
     codex-desktop-linux = {
       url = "github:ilysenko/codex-desktop-linux";
       inputs.nixpkgs.follows = "nixpkgs";
@@ -34,7 +39,9 @@
       inputs.nixpkgs.follows = "nixpkgs";
     };
     import-tree.url = "github:denful/import-tree";
+    linuxqq-wayland-fix.url = "github:SHORiN-KiWATA/linuxqq-wayland-fix";
     nix-alien.url = "github:thiagokokada/nix-alien";
+    nix-claude-code.url = "github:ryoppippi/nix-claude-code";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
     nixpkgs.url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst";
     nixpkgs-pkun.url = "github:nixos/nixpkgs/nixpkgs-unstable";
