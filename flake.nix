@@ -69,5 +69,6 @@
     preservation.url = "github:nix-community/preservation";
     prismlauncher.url = "github:PrismLauncher/PrismLauncher";
     xiongchenyu6.url = "github:xiongchenyu6/nur-packages";
+    xp3-brute.url = "github:Waroku06/xp3-brute";
   };
 }

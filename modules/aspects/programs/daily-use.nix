@@ -24,14 +24,19 @@
               url =
                 "https://downloads.sourceforge.net/project/obsidian.mirror/"
                 + "v${old.version}/obsidian-${old.version}.tar.gz";
-              hash = "sha256-08vjdcv6QCTbGRC5gZFkn0E0xcSK7l5gtudxOYfc2yg=";
+              hash = "sha256-5wt81jeH5/eYqE/sRT9cRGuRh3vT9hLo+5jpt2zIESA=";
             };
           }))
           libreoffice
           wpsoffice-cn
-          yazi
           google-chrome
         ];
+        programs.yazi = {
+          enable = true;
+          enableBashIntegration = true;
+          enableFishIntegration = true;
+          shellWrapperName = "y";
+        };
       };
   };
 }

@@ -1,4 +1,5 @@
-{
+{ inputs, ... }: {
+  flake-file.inputs.xp3-brute.url = "github:Waroku06/xp3-brute";
   den.ful.programs.archive.homeManager =
     { pkgs, ... }:
     {
@@ -13,7 +14,7 @@
         p7zip
         rar
         zip
-        nur.repos.lxl66566.xp3-pack-unpack
+        inputs.xp3-brute.packages.${pkgs.stdenv.hostPlatform.system}.default
       ];
     };
 }
