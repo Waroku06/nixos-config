@@ -39,7 +39,6 @@
           jnoortheen.nix-ide
           ms-ceintl.vscode-language-pack-zh-hans
           james-yu.latex-workshop
-          eamodio.gitlens
           visualjj.visualjj
         ];
       };

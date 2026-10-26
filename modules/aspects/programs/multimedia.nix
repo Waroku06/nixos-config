@@ -5,7 +5,7 @@
       vlc
       haruna
       obs-studio
-      krita
+      # krita
       subtitlecomposer
       flameshot
     ];

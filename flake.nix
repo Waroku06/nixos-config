@@ -43,7 +43,7 @@
     nix-alien.url = "github:thiagokokada/nix-alien";
     nix-claude-code.url = "github:ryoppippi/nix-claude-code";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
-    nixpkgs.url = "https://channels.nixos.org/nixpkgs-unstable/nixexprs.tar.zst";
+    nixpkgs.url = "github:NixOS/nixpkgs/55bfb4d7437bd4e09ab7cba58a43bd68eb310044";
     nixpkgs-pkun.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs-small.url = "github:nixos/nixpkgs/nixos-unstable-small";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-26.05";

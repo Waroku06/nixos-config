@@ -26,6 +26,8 @@ let
 in
 {
   flake-file.inputs = {
+    # Temporary pin for nixpkgs#575192: vmware modules lack .ko.cer files.
+    nixpkgs.url = "github:NixOS/nixpkgs/55bfb4d7437bd4e09ab7cba58a43bd68eb310044";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-26.05";
     nixpkgs-pkun.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs-small.url = "github:nixos/nixpkgs/nixos-unstable-small";

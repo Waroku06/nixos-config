@@ -79,6 +79,7 @@ in
 #       ];
       # boot.kernelPackages = lib.mkDefault pkgs.cachyosKernels.linuxPackages-cachyos-latest;
       # too slow...
+      boot.kernelPackages = pkgs.linuxPackages_latest;
       programs.gamemode.enable = lib.mkDefault true;
 
       hardware.bluetooth.enable = true; # 蓝牙支持
