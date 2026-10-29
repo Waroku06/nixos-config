@@ -11,22 +11,8 @@
       { pkgs, ... }:
       {
         home.packages = with pkgs; [
-          (wechat.override {
-            fetchurl =
-              _:
-              pkgs.fetchurl {
-                url = "https://dldir1v6.qq.com/weixin/Universal/Linux/WeChatLinux_x86_64.AppImage";
-                hash = "sha256-RSYYC8qYASh5FZmvEi/0eVACpXFaUQ9qZUgOK+aHQkQ=";
-              };
-          })
-          (obsidian.overrideAttrs (old: {
-            src = fetchurl {
-              url =
-                "https://downloads.sourceforge.net/project/obsidian.mirror/"
-                + "v${old.version}/obsidian-${old.version}.tar.gz";
-              hash = "sha256-5wt81jeH5/eYqE/sRT9cRGuRh3vT9hLo+5jpt2zIESA=";
-            };
-          }))
+          wechat
+          obsidian
           libreoffice
           wpsoffice-cn
           google-chrome

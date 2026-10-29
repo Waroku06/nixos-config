@@ -52,12 +52,9 @@ in
       # 音频服务
       services.pipewire = {
         enable = true;
-        # package = pkgs.pipewire;
         alsa.enable = true;
         alsa.support32Bit = true;
         pulse.enable = true;
-        # 若你需要使用 JACK 应用，取消下面的注释
-        jack.enable = true;
         wireplumber.enable = true;
       };
       # rtkit 非必需但推荐
@@ -79,7 +76,7 @@ in
 #       ];
       # boot.kernelPackages = lib.mkDefault pkgs.cachyosKernels.linuxPackages-cachyos-latest;
       # too slow...
-      boot.kernelPackages = pkgs.linuxPackages_latest;
+      boot.kernelPackages = pkgs.linuxPackages_zen;
       programs.gamemode.enable = lib.mkDefault true;
 
       hardware.bluetooth.enable = true; # 蓝牙支持

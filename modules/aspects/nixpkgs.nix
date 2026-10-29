@@ -26,8 +26,6 @@ let
 in
 {
   flake-file.inputs = {
-    # Temporary pin for nixpkgs#575192: vmware modules lack .ko.cer files.
-    nixpkgs.url = "github:NixOS/nixpkgs/55bfb4d7437bd4e09ab7cba58a43bd68eb310044";
     nixpkgs-stable.url = "github:nixos/nixpkgs/nixos-26.05";
     nixpkgs-pkun.url = "github:nixos/nixpkgs/nixpkgs-unstable";
     nixpkgs-small.url = "github:nixos/nixpkgs/nixos-unstable-small";
@@ -39,9 +37,9 @@ in
   den.aspects.nixpkgs.nixos = { host, ... }: {
     nix.settings = {
       substituters = [
-        "https://mirrors.ustc.edu.cn/nix-channels/store"
-        "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store"
-        "https://cache.nixos.org/"
+        "https://mirror.sjtu.edu.cn/nix-channels/store?priority=10"
+        "https://mirrors.tuna.tsinghua.edu.cn/nix-channels/store?priority=20"
+        "https://mirrors.ustc.edu.cn/nix-channels/store?priority=30"
       ];
       trusted-public-keys = [
         "cache.nixos.org-1:6NCHdD59X431o0gWypbMrAURkbJ16ZPMQFGspcDShjY="
