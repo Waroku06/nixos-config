@@ -5,6 +5,7 @@
     <den/define-user>
     <den/primary-user>
     <den/host-aspects>
+    <den/user-aspects>
     (<den/user-shell> "fish")
     <gui>
     <fcitx5>
