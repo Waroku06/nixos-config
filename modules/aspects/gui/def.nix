@@ -1,9 +1,8 @@
 { den, ... }: {
   den.aspects.gui = {
     includes = with den.ful.gui; [
-      # niri
-      # noctalia
       plasma
+      rikka
     ];
     nixos = {
       services.xserver.enable = true;

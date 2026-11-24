@@ -13,6 +13,7 @@ in
   _module.args.__findFile = den.lib.__findFile;
   # 默认启用 homeManager
   den.schema.user.classes = lib.mkDefault [ "homeManager" ];
+  den.schema.host.includes = [ <den/user-aspects> ];
   flake-file = {
     nixConfig = {
       lazy-trees = true;

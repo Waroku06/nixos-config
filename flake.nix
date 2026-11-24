@@ -40,6 +40,7 @@
     };
     import-tree.url = "github:denful/import-tree";
     linuxqq-wayland-fix.url = "github:SHORiN-KiWATA/linuxqq-wayland-fix";
+    llm-agents.url = "github:numtide/llm-agents.nix";
     nix-alien.url = "github:thiagokokada/nix-alien";
     nix-claude-code.url = "github:ryoppippi/nix-claude-code";
     nixos-hardware.url = "github:NixOS/nixos-hardware/master";
@@ -68,6 +69,7 @@
     };
     preservation.url = "github:nix-community/preservation";
     prismlauncher.url = "github:PrismLauncher/PrismLauncher";
+    rikka.url = "github:project-rikka/packages";
     xiongchenyu6.url = "github:xiongchenyu6/nur-packages";
     xp3-brute.url = "github:Waroku06/xp3-brute";
   };

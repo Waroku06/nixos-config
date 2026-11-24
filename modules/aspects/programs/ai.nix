@@ -8,6 +8,7 @@
         url = "github:ilysenko/codex-desktop-linux";
         inputs.nixpkgs.follows = "nixpkgs";
       };
+      llm-agents.url = "github:numtide/llm-agents.nix";
       xiongchenyu6.url = "github:xiongchenyu6/nur-packages";
       nix-claude-code.url = "github:ryoppippi/nix-claude-code";
     };
@@ -30,6 +31,7 @@
       inputs.xiongchenyu6.packages.${pkgs.stdenv.hostPlatform.system}.cc-switch
       inputs.codex-cli-nix.packages.${pkgs.stdenv.hostPlatform.system}.default
       pkgs.claude-code
+      inputs.llm-agents.packages.${pkgs.stdenv.hostPlatform.system}.gemini-cli
     ];
   };
 }
